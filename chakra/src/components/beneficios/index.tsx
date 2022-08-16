@@ -30,11 +30,12 @@ export function Beneficios() {
       justify="center"
       align="center"
       flexDir="column"
+      
     >
-      <Flex>
+      <Flex w="100%" justify="space-evenly">
         {icons.map((icons) => {
           return (
-            <Flex key={icons.text} margin={130} flexDir="column" align="center">
+            <Flex key={icons.text} flexDir="column" align="center">
               <Image src={icons.src.src} height={85} width={85} alt="icon" />
               <Text fontSize={24}>{icons.text}</Text>
             </Flex>
