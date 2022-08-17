@@ -1,5 +1,6 @@
 import { Box, Center, Icon } from "@chakra-ui/react";
 import { MinusIcon } from "@chakra-ui/icons";
+import { useMediaQuery } from "@chakra-ui/react";
 
 export function Anuncio() {
   return (
@@ -8,7 +9,7 @@ export function Anuncio() {
         <Icon as={MinusIcon} w={300} h={0.3} color="black" background="black" />
       </Center>
       <Center marginTop={40}> Vamos nessa? </Center>
-      <Center>Então escolha seu continente</Center>
+      <Center textAlign="center">Então escolha seu continente</Center>
     </Box>
   );
 }
