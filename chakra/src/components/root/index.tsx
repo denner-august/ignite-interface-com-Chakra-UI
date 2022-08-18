@@ -7,7 +7,7 @@ import { Paises } from "../paises";
 export function Root() {
   return (
     <>
-      <Header />
+      <Header back={false} />
       <Banner />
       <Beneficios />
       <Anuncio />
