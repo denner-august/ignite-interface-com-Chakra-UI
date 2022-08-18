@@ -1,14 +1,23 @@
-import { Box, Image } from "@chakra-ui/react";
+import { Image, Icon, Flex, Center } from "@chakra-ui/react";
+import { ArrowBackIcon } from "@chakra-ui/icons";
+import NextLink from "next/link";
 
-export function Header() {
+type backpage = {
+  back: boolean;
+};
+
+export function Header({ back = false }: backpage) {
   return (
-    <Box
-      height={100}
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-    >
-      <Image src="/images/logo.svg" height={45.92} width={186.7} alt="logo" />
-    </Box>
+    <Flex height={100} alignItems="center" justifyContent="center">
+      {back ? (
+        <NextLink href={"/"} passHref>
+          <Icon as={ArrowBackIcon} fontSize={20} cursor="pointer" />
+        </NextLink>
+      ) : null}
+
+      <Center w="90%">
+        <Image src="/images/logo.svg" height={45.92} width={186.7} alt="logo" />
+      </Center>
+    </Flex>
   );
 }

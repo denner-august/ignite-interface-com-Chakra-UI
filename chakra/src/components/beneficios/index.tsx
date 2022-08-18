@@ -1,15 +1,4 @@
-import {
-  Flex,
-  Spacer,
-  Text,
-  Image,
-  Box,
-  Icon,
-  Container,
-  Center,
-  Wrap,
-  WrapItem,
-} from "@chakra-ui/react";
+import { Flex, Text, Image, Wrap, WrapItem } from "@chakra-ui/react";
 import classico from "../../../public/images/icons/classico.svg";
 import moderno from "../../../public/images/icons/moderno.svg";
 import predio from "../../../public/images/icons/predio.svg";
@@ -52,7 +41,7 @@ export function Beneficios() {
                   <Text fontSize={24}>{icons.text}</Text>
                 </WrapItem>
               );
-            })}{" "}
+            })}
           </Wrap>
         ) : (
           icons.map((icons) => {

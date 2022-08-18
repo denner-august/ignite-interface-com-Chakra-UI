@@ -1,6 +1,5 @@
 import { Box, Center, Icon } from "@chakra-ui/react";
 import { MinusIcon } from "@chakra-ui/icons";
-import { useMediaQuery } from "@chakra-ui/react";
 
 export function Anuncio() {
   return (

@@ -1,10 +1,13 @@
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
+import { useRouter } from "next/router";
+import NextLink from "next/link";
+
+import { Navigation, Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Box, Center, Flex, Text } from "@chakra-ui/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Box, Center, Flex, Image, Text } from "@chakra-ui/react";
 
 import europa from "../../../public/images/paises/europa.svg";
 import londres from "../../../public/images/paises/londres.jpg";
@@ -46,9 +49,11 @@ export function Paises() {
                   justify="center"
                 >
                   <Center>
-                    <Text color="white" fontSize={70}>
-                      {paises.text}
-                    </Text>
+                    <NextLink href={"/descricao"} passHref>
+                      <Text color="white" fontSize={70} cursor={"pointer"}>
+                        Europa
+                      </Text>
+                    </NextLink>
                   </Center>
                 </Flex>
               </SwiperSlide>
